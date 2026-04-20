@@ -2,6 +2,13 @@
 
 ![HaleES Architecture](assets/IMG_0475.jpeg)
 
+<p align="center">
+  <a href="https://github.com/FatherHale/FatherHale-halees-architecture/blob/main/LICENSE.md"><img src="https://img.shields.io/badge/License-AGPL--3.0-blue.svg" alt="License"></a>
+  <img src="https://img.shields.io/badge/Patent-Pending-orange.svg" alt="Patent Pending">
+  <img src="https://img.shields.io/badge/Version-0.1.0-lightgrey.svg" alt="v0.1.0">
+  <img src="https://img.shields.io/badge/Type-Architecture%20Spec-9cf.svg" alt="Spec">
+</p>
+
 > Public architecture specification for HaleES, An enforcement-first governance layer for reliable, auditable AI agent operations.
 
 ### Thesis
