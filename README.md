@@ -3,10 +3,6 @@
 ![HaleES Architecture](assets/IMG_0475.jpeg)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/FatherHale/FatherHale-halees-architecture/main/header.png" width="100%" alt="HaleES Architecture">
-</p>
-
-<p align="center">
   <a href="https://github.com/FatherHale/FatherHale-halees-architecture/blob/main/LICENSE.md">
     <img src="https://img.shields.io/badge/License-AGPL--3.0-gold.svg?style=flat" alt="License: AGPL-3.0">
   </a>
