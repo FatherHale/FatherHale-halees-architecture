@@ -198,15 +198,6 @@ Patent pending. A provisional patent application covering the grading and orches
 
 This notice is provided for transparency about the architecture direction and does not claim a granted patent.
 
-## Recommended Repository Names
-
-If publishing or mirroring this public specification, recommended repository names include:
-
-- `halees-architecture`
-- `halees-contract-spec`
-
-These names clearly signal the focus on architecture and governance specification rather than production runtime source release.
-
 ## Closing Statement
 
 HaleES proposes a clear architectural stance: in operational AI systems, governance is not an accessory layer applied after generation. Governance is the system.
