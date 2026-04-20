@@ -2,9 +2,9 @@
 
 ![HaleES Architecture](assets/halees-architecture-header.svg)
 
-> Public architecture specification for HaleES — an enforcement-first governance layer for reliable, auditable AI agent operations.
+> Public architecture specification for HaleES, An enforcement-first governance layer for reliable, auditable AI agent operations.
 
-## Opening Thesis
+Thesis
 
 **Most AI agent frameworks optimize for flexibility.**  
 **HaleES optimizes for survival in production.**
@@ -15,7 +15,7 @@ This is not a tooling problem. It is a **governance problem**.
 
 HaleES exists to solve it.
 
-Many modern AI agent frameworks are built to maximize flexibility: connect more tools, support more prompts, chain more workflows, and allow agents to improvise across loosely bounded tasks. That flexibility can be useful for experimentation. But production operations—especially in domains where service quality, policy compliance, and accountability matter—require something stricter.
+Many modern AI agent frameworks are built to maximize flexibility: connect more tools, support more prompts, chain more workflows, and allow agents to improvise across loosely bounded tasks. That flexibility can be useful for experimentation. But production operations, especially in domains where service quality, policy compliance, and accountability matter and require something stricter.
 
 HaleES starts from a different premise: an operational AI system is only as reliable as its governance. In real environments, useful intelligence must be paired with enforceable authority boundaries, traceable decisions, explicit quality gates, and deterministic pass/fail outcomes.
 
@@ -32,13 +32,13 @@ Organizations adopting AI often hit a recurring operational gap:
 - They cannot reliably prove why a decision passed.
 - They cannot always prevent unauthorized or risky behavior from being treated as acceptable work.
 
-In flexibility-first patterns, capability often arrives before control. In operations, that order is backwards.
+In flexibility first patterns, capability often arrives before control. In operations, that order is backwards.
 
 HaleES exists to invert that order. It is built for environments where outputs must be:
 
-- **bounded by policy**, not only by prompt intent;
-- **scored against explicit criteria**, not judged informally;
-- **accepted through a clear decision threshold**, not by default;
+- **bounded by policy**, not only by prompt intent.
+- **scored against explicit criteria**, not judged informally.
+- **accepted through a clear decision threshold**, not by default.
 - **auditable after execution**, not opaque once delivered.
 
 This architecture does not reject model capability. It contextualizes it. Intelligence remains valuable, but governance defines whether intelligence is operationally usable.
@@ -53,13 +53,13 @@ A skill, prompt, model, tool, or workflow does **not** gain permission just beca
 
 In HaleES, authority must come from governance signals such as:
 
-- verified identity,
-- applicable policy,
-- risk classification,
-- approval requirements,
-- and audited execution context.
+- verified identity
+- applicable policy
+- risk classification
+- approval requirements
+- and audited execution context
 
-This distinction matters because many AI failures are not failures of generation—they are failures of authorization. A system can produce plausible output and still violate process, policy, or operational safety. HaleES addresses that failure mode by separating what a component **knows** from what it is **allowed** to do.
+This distinction matters because many AI failures are not failures of generation. They are failures of authorization. A system can produce plausible output and still violate process, policy, or operational safety. HaleES addresses that failure mode by separating what a component **knows** from what it is **allowed** to do.
 
 ## Sensei as Orchestration/Control Plane
 
@@ -79,11 +79,11 @@ Conceptually:
 - **Contracts** define requested work.
 - **Grading** determines whether work passes.
 
-This architecture ensures that orchestration is policy-aware rather than ad hoc. Selection and execution are not merely capability-driven; they are governance-driven.
+This architecture ensures that orchestration is policy aware rather than ad hoc. Selection and execution are not merely capability driven. They are governance driven.
 
-To be explicit about boundary: the production Sensei OS runtime remains proprietary. This public repository describes architectural patterns, open contract/grading conventions, and governance principles—not the closed production internals.
+To be explicit about boundary: Thee production Sensei OS runtime remains proprietary. This public repository describes architectural patterns, open contract/grading conventions, and governance principles—not the closed production internals.
 
-## Dual-Layer Grading
+### Dual-Layer Grading
 
 HaleES evaluates work through a dual-layer grading mechanism that combines nuanced scoring with a decisive outcome.
 
@@ -122,7 +122,7 @@ Gradient scoring provides explainability and diagnostic granularity. Binary gati
 
 ## Contract-Driven Loop
 
-HaleES execution follows a contract-driven loop:
+HaleES execution follows a contract driven loop:
 
 1. **Orchestrator creates a contract** with objective, constraints, acceptance criteria, and expected output shape.
 2. **Agent/model/tool executes** against that contract.
@@ -137,14 +137,14 @@ This loop creates disciplined progression toward acceptable output rather than u
 
 Below is a public-safe high-level lifecycle for a governed AI task:
 
-1. A supervisor submits a request to produce a staffing recovery plan for a same-day shift gap.
+1. A supervisor submits a request to produce a staffing recovery plan for a same day shift gap.
 2. The orchestrator issues a structured contract with required sections, policy boundaries, and constraints.
 3. A selected specialist model/tool produces a draft plan.
 4. The grader scores the draft across the five categories and computes `global_score`.
 5. If below threshold, the system attaches actionable feedback (e.g., missing contingency branch, incomplete escalation criteria) and re-runs iteration.
 6. Once score reaches threshold, binary decision flips to pass and the output is finalized for operational use.
 
-The important distinction is that generation alone never finalizes work. Acceptance is governance-mediated.
+The important distinction is that generation alone never finalizes work. Acceptance is governance mediated.
 
 ## How HaleES Differs from Flexibility-First Frameworks
 
@@ -168,20 +168,20 @@ This repository intentionally opens the architecture elements needed to understa
 
 Included publicly:
 
-- contract format,
-- grading rubric,
-- public examples,
-- skills-as-knowledge principle,
-- high-level governance pattern.
+- contract format
+- grading rubric
+- public examples
+- skills-as-knowledge principle
+- high-level governance pattern
 
-These documents are designed to be implementation-oriented while remaining safe for public distribution.
+These documents are designed to be implementation oriented while remaining safe for public distribution.
 
 ## What Remains Proprietary
 
 The following remain proprietary and are not provided in this public specification repository:
 
 - Sensei OS production runtime,
-- closed-source grader implementation,
+- closed source grader implementation,
 - model routing implementation,
 - command/execution engine,
 - marketplace enforcement engine,
@@ -200,8 +200,8 @@ This notice is provided for transparency about the architecture direction and do
 
 ## Closing Statement
 
-HaleES proposes a clear architectural stance: in operational AI systems, governance is not an accessory layer applied after generation. Governance is the system.
+HaleES proposes a clear architectural stance. In operational AI systems, governance is not an accessory layer applied after generation. Governance is the system.
 
-By separating knowledge from authority, defining work through contracts, and enforcing outcomes with dual-layer grading, HaleES offers a framework for organizations that need reliable, auditable AI execution instead of best-effort autonomy.
+By separating knowledge from authority, defining work through contracts, and enforcing outcomes with dual layer grading, HaleES offers a framework for organizations that need reliable, auditable AI execution instead of best-effort autonomy.
 
 The goal is not less intelligence. The goal is intelligence that can be trusted in production.
