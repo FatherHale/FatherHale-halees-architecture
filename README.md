@@ -52,6 +52,19 @@ A useful answer can still be unsafe to trust. HaleES treats that as the starting
 
 The private product runtime is not published here.
 
+## What You Can Run Today
+
+This repository is not the HaleES runtime, but it includes small public reference tools.
+
+| Runnable piece | Command | Purpose |
+| --- | --- | --- |
+| Mock contract loop | `python reference/end_to_end_mock_loop.py` | Shows contract, mock execution, dummy grading, decision, feedback, and iteration |
+| Contract validator | `python validators/contract_validator.py examples/staffing_recovery_contract.md` | Checks whether a markdown contract has the expected public sections |
+| Grading validator | `python validators/grading_validator.py examples/sample_grading_result.json` | Checks whether a grading result has the expected public fields and threshold decision |
+
+> [!NOTE]
+> These tools are intentionally small. They let people touch the public pattern without exposing the private HaleES engine.
+
 ## Current Status
 
 This is an early public specification with runnable reference material.
