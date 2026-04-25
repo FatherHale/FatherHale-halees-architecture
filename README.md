@@ -6,10 +6,14 @@
 
 **Governed operational intelligence for systems where a useful answer is not the same thing as a trusted action.**
 
-![Status](https://img.shields.io/badge/status-public%20specification-C9A227?style=for-the-badge&labelColor=0B0B0B)
-![Runtime](https://img.shields.io/badge/runtime-proprietary-0B0B0B?style=for-the-badge&labelColor=C9A227)
-![Pattern](https://img.shields.io/badge/pattern-contract%20grading%20audit-C9A227?style=for-the-badge&labelColor=0B0B0B)
-![Boundary](https://img.shields.io/badge/boundary-public%20safe-0B0B0B?style=for-the-badge&labelColor=C9A227)
+<p align="center">
+  <a href="https://github.com/FatherHale/HaleES-Architecture/blob/main/LICENSE.md">
+    <img src="https://img.shields.io/badge/License-AGPL--3.0-gold.svg?style=flat" alt="License: AGPL-3.0">
+  </a>
+  <img src="https://img.shields.io/badge/Patent-Pending-gold.svg?style=flat" alt="Patent Pending">
+  <img src="https://img.shields.io/badge/Version-0.1.0-gold.svg?style=flat" alt="Version 0.1.0">
+  <img src="https://img.shields.io/badge/Type-Architecture%20Spec-gold.svg?style=flat" alt="Type: Architecture Spec">
+</p>
 
 </div>
 
