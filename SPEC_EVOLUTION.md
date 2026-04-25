@@ -1,10 +1,7 @@
 # Spec Evolution
 
-This document explains how the public HaleES architecture specification is expected to grow.
-
-The production HaleES runtime remains closed.
-
-The public specification can still evolve in useful ways without exposing the private engine.
+> [!NOTE]
+> The public HaleES specification can grow without opening the private HaleES runtime.
 
 ## Current Focus
 
@@ -15,6 +12,16 @@ The current public focus is simple.
 3. Add public safe examples from real operational patterns.
 4. Add reference validators that check public shape, not private logic.
 5. Keep the boundary clear between open specification and closed runtime.
+
+## Public Roadmap
+
+| Area | Direction |
+| --- | --- |
+| Contracts | Clearer examples, safer authority language, better field definitions |
+| Rubric | More pass and fail samples, clearer feedback examples, better review guidance |
+| Examples | More scenarios across risk levels, privacy needs, and inference placement choices |
+| Validators | Better public shape checks for contracts and grading results |
+| Glossary | Clearer terms for authority, contract, grading, inference, privacy boundary, and audit |
 
 ## What Will Improve Over Time
 
@@ -40,14 +47,6 @@ The public spec explains the pattern.
 
 The private product remains the machine.
 
-## Near Term Public Roadmap
-
-1. Add more public examples for hospitality operations.
-2. Add more pass and fail grading samples.
-3. Add simple contract validation examples in plain Python.
-4. Add a public checklist for reviewing contract quality.
-5. Add a public glossary for core terms like authority, contract, grading, inference, privacy boundary, and audit.
-
 ## Contribution Direction
 
 Useful public contributions should improve clarity, examples, validator shape, documentation, or rubric calibration.
@@ -57,3 +56,5 @@ They should not include secrets, private data, private runtime details, or specu
 The standard is simple.
 
 Make the public pattern easier to understand without exposing what should stay protected.
+
+[Back to README](README.md)
