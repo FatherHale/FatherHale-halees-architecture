@@ -6,38 +6,39 @@
 
 HaleES is a public architecture specification for governed operational intelligence.
 
-The core idea is simple. A system can generate a useful answer and still be unsafe to trust.
+A useful answer is not the same thing as a trusted action.
 
-HaleES starts with governance, not generation.
+HaleES starts with that line.
 
 This repository explains the public pattern behind contract driven execution, dual layer grading, local first and cloud capable inference, privacy boundaries, model governance, tool governance, orchestration governance, and auditable authority.
 
-The production HaleES runtime is closed. This repository explains the principle, not the private machine.
+The production HaleES runtime is closed. This repository explains the public pattern, not the private engine.
 
 ## Current Status
 
 This is an early public architecture specification.
 
-The contract format, grading rubric, examples, diagrams, JSON samples, reliability notes, simple validators, and mock loop are public reference material.
+It now includes diagrams, public examples, JSON samples, JSON Schemas, shape validators, a mock end to end loop, and reliability notes.
 
 The validators check public shape only. They are not the HaleES production grader.
 
-The mock loop shows contract, mock execution, mock grading, decision, feedback, and iteration. It is not the HaleES production runtime.
+The mock loop is runnable reference code. It shows the loop, but it is not the HaleES production runtime.
 
-The examples are public safe scenarios. They do not expose private customer data, private routing, private memory, private infrastructure, or commercial product code.
+The examples are public safe. They do not expose private customer data, private routing, private memory, private infrastructure, or commercial product code.
 
 ## Start Here
 
-1. Read this README for the high level architecture.
-2. Read CONTRACT SPEC for the public contract format.
-3. Read GRADING RUBRIC for the 0 to 100 score and 0 or 1 decision pattern.
-4. Read GRADER RELIABILITY for the public reliability questions around scoring, review, and gaming.
-5. Read MODEL TOOL AND ORCHESTRATION GOVERNANCE for the public control layer principles.
-6. Read PUBLIC BOUNDARY before using or contributing anything from this repo.
-7. Review the examples folder for public safe scenarios, JSON samples, and broader domain examples.
-8. Review the validators folder for simple shape checks.
-9. Review the reference folder for the mock end to end loop.
-10. Read SPEC EVOLUTION to see where the public spec can grow.
+1. [Quickstart](QUICKSTART.md) shows how to run the public mock loop and validators.
+2. [Contract Spec](CONTRACT-SPEC.md) defines the public contract format.
+3. [Grading Rubric](GRADING-RUBRIC.md) defines the 0 to 100 score and 0 or 1 decision pattern.
+4. [Grader Reliability](GRADER_RELIABILITY.md) explains the public reliability questions around scoring, review, and gaming.
+5. [Model, Tool, And Orchestration Governance](MODEL_TOOL_AND_ORCHESTRATION_GOVERNANCE.md) explains the public control layer principles.
+6. [Public Boundary](PUBLIC_BOUNDARY.md) explains what is open and what stays closed.
+7. [Spec Evolution](SPEC_EVOLUTION.md) explains where the public spec can grow.
+8. [Examples](examples) contains public safe scenarios, JSON samples, and broader domain examples.
+9. [Validators](validators) contains simple public shape checks.
+10. [Reference](reference) contains the mock end to end loop.
+11. [Schemas](schemas) contains public JSON Schemas.
 
 ## What Stays Closed
 
@@ -323,7 +324,7 @@ This is not a claim that every other framework is wrong. It is a different desig
 
 This repository opens the architecture elements needed to understand and implement the HaleES governance pattern at a specification level.
 
-Public material includes contract format, grading rubric, public examples, JSON samples, reference validators, grader reliability notes, a mock loop, the skills are knowledge principle, local first and cloud capable inference pattern, privacy first data boundary principles, and the high level governance pattern.
+Public material includes contract format, grading rubric, public examples, JSON samples, JSON Schemas, reference validators, grader reliability notes, a mock loop, the skills are knowledge principle, local first and cloud capable inference pattern, privacy first data boundary principles, and the high level governance pattern.
 
 These documents are designed to be useful while remaining safe for public distribution.
 
