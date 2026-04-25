@@ -2,24 +2,44 @@
 
 ![HaleES Architecture](assets/IMG_0475.jpeg)
 
-## Get Started
+## What This Is
 
-This repository contains the open architecture specification for HaleES. HaleES is an enforcement first governance layer for reliable operational intelligence.
+HaleES is a public architecture specification for governed operational intelligence.
 
-Quick actions
+The core idea is simple. A system can generate a useful answer and still be unsafe to trust.
 
-1. Read this full specification to understand the core philosophy, dual layer grading, contract driven execution, local first inference, cloud capable inference, and privacy first governance.
-2. Explore the contract format in CONTRACT SPEC to see the public markdown structure with a hospitality example.
-3. Review the grading rubric in GRADING RUBRIC to understand how outputs are scored from 0 to 100 and decided as 0 or 1.
-4. Read SPEC EVOLUTION to see how the public contract spec, rubric, examples, and validators are expected to mature.
-5. Read PUBLIC BOUNDARY to understand what is open and what stays proprietary.
-6. Read SECURITY to understand how to report security concerns.
-7. Review the examples folder for public safe task patterns.
-8. Review the validators folder for simple public shape checks.
-9. Follow updates on X at @AskSenseiES.
+HaleES starts with governance, not generation.
 
-Most agent frameworks chase flexibility.
-HaleES is built for survival in real operations.
+This repository explains the public pattern behind contract driven execution, dual layer grading, local first and cloud capable inference, privacy boundaries, model governance, tool governance, orchestration governance, and auditable authority.
+
+The production HaleES runtime is closed. This repository explains the principle, not the private machine.
+
+## Current Status
+
+This is an early public architecture specification.
+
+The contract format, grading rubric, examples, diagrams, and simple validators are public reference material.
+
+The validators check public shape only. They are not the HaleES production grader.
+
+The examples are public safe scenarios. They do not expose private customer data, private routing, private memory, private infrastructure, or commercial product code.
+
+## Start Here
+
+1. Read this README for the high level architecture.
+2. Read CONTRACT SPEC for the public contract format.
+3. Read GRADING RUBRIC for the 0 to 100 score and 0 or 1 decision pattern.
+4. Read MODEL TOOL AND ORCHESTRATION GOVERNANCE for the public control layer principles.
+5. Read PUBLIC BOUNDARY before using or contributing anything from this repo.
+6. Review the examples folder for public safe scenarios.
+7. Review the validators folder for simple shape checks.
+8. Read SPEC EVOLUTION to see where the public spec can grow.
+
+## What Stays Closed
+
+The production Sensei OS runtime remains proprietary.
+
+The private grader, model routing, tool routing, orchestration budgets, memory boundaries, execution engine, marketplace enforcement, hosted infrastructure, private datasets, and commercial HaleES product code are not part of this public repository.
 
 ## Core Concepts At A Glance
 
@@ -40,6 +60,10 @@ A failed result can iterate with feedback.
 A passed result can move forward through the proper authority boundary.
 
 The audit trail matters because operational intelligence has to explain what happened after the fact.
+
+Most agent frameworks chase flexibility.
+
+HaleES is built for survival in real operations.
 
 ## Public Flow Diagram
 
@@ -76,10 +100,6 @@ flowchart TD
 ```
 
 ## Thesis
-
-The problem is simple. A system can generate a useful answer and still be unsafe to trust.
-
-That is why HaleES starts with governance, not generation.
 
 In real operations, especially hospitality, the question is not only what an agent can do. The better question is what the agent is allowed to do, under which policy, with what evidence, and how the result is accepted or rejected.
 
