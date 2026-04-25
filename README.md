@@ -11,10 +11,12 @@ Quick actions
 1. Read this full specification to understand the core philosophy, dual layer grading, contract driven execution, local first inference, cloud capable inference, and privacy first governance.
 2. Explore the contract format in CONTRACT SPEC to see the public markdown structure with a hospitality example.
 3. Review the grading rubric in GRADING RUBRIC to understand how outputs are scored from 0 to 100 and decided as 0 or 1.
-4. Read PUBLIC BOUNDARY to understand what is open and what stays proprietary.
-5. Read SECURITY to understand how to report security concerns.
-6. Review the examples folder for public safe task patterns.
-7. Follow updates on X at @AskSenseiES.
+4. Read SPEC EVOLUTION to see how the public contract spec, rubric, examples, and validators are expected to mature.
+5. Read PUBLIC BOUNDARY to understand what is open and what stays proprietary.
+6. Read SECURITY to understand how to report security concerns.
+7. Review the examples folder for public safe task patterns.
+8. Review the validators folder for simple public shape checks.
+9. Follow updates on X at @AskSenseiES.
 
 Most agent frameworks chase flexibility.
 HaleES is built for survival in real operations.
@@ -259,7 +261,9 @@ The examples folder includes public safe scenarios that show how the same patter
 1. Staffing recovery, where the system needs speed and operational clarity.
 2. Privacy sensitive guest recovery, where minimum necessary context matters.
 3. Cross property coordination, where shared pattern intelligence is useful without exposing one property private data to another.
-4. A simple reference validator, written as pseudocode, for people who want to understand the contract and grading pattern without seeing the private HaleES runtime.
+4. Rubric pass and fail samples, where the scoring and binary decision pattern can be understood without the private production grader.
+
+The reference and validators folders include public safe tools that check shape only. They do not reproduce private HaleES scoring, routing, memory, or execution logic.
 
 ## Adoption Path
 
@@ -269,9 +273,10 @@ People can engage with the open spec in several safe ways.
 
 1. Study the contract format and grading pattern.
 2. Use the public examples to structure governed work in their own systems.
-3. Build small tools that validate whether a contract includes objective, constraints, required output, acceptance criteria, and a decision threshold.
-4. Discuss governance patterns through issues without exposing private customer data or runtime internals.
-5. Compare the pattern against flexibility first frameworks to understand where authority, privacy, audit, and pass or fail decisions should live.
+3. Run the public validators to check whether a sample contract or grading result has the expected visible shape.
+4. Build small tools that validate whether a contract includes objective, constraints, required output, acceptance criteria, and a decision threshold.
+5. Discuss governance patterns through issues without exposing private customer data or runtime internals.
+6. Compare the pattern against flexibility first frameworks to understand where authority, privacy, audit, and pass or fail decisions should live.
 
 The open specification shares the principle. The private HaleES runtime remains the machine.
 
@@ -289,7 +294,7 @@ This is not a claim that every other framework is wrong. It is a different desig
 
 This repository opens the architecture elements needed to understand and implement the HaleES governance pattern at a specification level.
 
-Public material includes contract format, grading rubric, public examples, the skills are knowledge principle, local first and cloud capable inference pattern, privacy first data boundary principles, and the high level governance pattern.
+Public material includes contract format, grading rubric, public examples, reference validators, the skills are knowledge principle, local first and cloud capable inference pattern, privacy first data boundary principles, and the high level governance pattern.
 
 These documents are designed to be useful while remaining safe for public distribution.
 
