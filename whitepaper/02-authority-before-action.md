@@ -1,4 +1,4 @@
-# 02 — Governance
+# 02 — Authority Before Action
 
 > [!IMPORTANT]
 > Authority is not a feature added later. It must be part of the foundation.
@@ -88,4 +88,4 @@ In this architecture, work is framed as a contract.
 | Risk level | Is human approval required? |
 | Audit requirement | Can the decision be reconstructed later? |
 
-[Back to reader](README.md) · [Previous: Foundation](01-foundation.md) · [Next: Constraints](03-constraints.md)
+[Back to reader](README.md) · [Previous: Why Enforcement Comes First](01-why-enforcement-comes-first.md) · [Next: Identity as Constraint](03-identity-as-constraint.md)

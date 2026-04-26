@@ -1,4 +1,4 @@
-# 05 — Examples
+# 05 — Hospitality Use Cases
 
 > [!NOTE]
 > These examples show the public pattern. They do not expose production runtime logic.
@@ -66,4 +66,4 @@ The image may look good and still fail if it shows the wrong product, implies an
 | Guest recovery | Privacy, policy, tone, approval |
 | Marketing | Brand, offer accuracy, likeness, publishing permission |
 
-[Back to reader](README.md) · [Previous: Operational Loops](04-operational-loops.md) · [Next: Public Boundary](06-public-boundary.md)
+[Back to reader](README.md) · [Previous: Consequence Loops](04-consequence-loops.md) · [Next: Open Pattern, Closed Runtime](06-open-pattern-closed-runtime.md)

@@ -1,4 +1,4 @@
-# 03 — Constraints
+# 03 — Identity as Constraint
 
 > [!IMPORTANT]
 > Constraints are how HaleES turns identity, policy, and service promise into operational control.
@@ -101,4 +101,4 @@ HaleES uses grading as a core architectural primitive.
 
 For example, a schedule recommendation might look strong overall but fail because one employee is scheduled outside availability. In that case, the binary gate should remain zero. The output may be useful for review, but it should not be accepted as executable.
 
-[Back to reader](README.md) · [Previous: Governance](02-governance.md) · [Next: Operational Loops](04-operational-loops.md)
+[Back to reader](README.md) · [Previous: Authority Before Action](02-authority-before-action.md) · [Next: Consequence Loops](04-consequence-loops.md)

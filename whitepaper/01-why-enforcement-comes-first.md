@@ -1,4 +1,4 @@
-# 01 — Foundation
+# 01 — Why Enforcement Comes First
 
 > [!IMPORTANT]
 > HaleES starts from a simple operating belief: a useful answer is not the same thing as a trusted action.
@@ -72,4 +72,4 @@ Request -> Contract -> Authority Check -> Policy Check -> Ground Truth Verificat
 | Confidence is not proof | A confident model can still be wrong, incomplete, stale, or unauthorized |
 | Scores are not decisions | A score informs the gate; the gate determines whether action can proceed |
 
-[Back to reader](README.md) · [Next: Governance](02-governance.md)
+[Back to reader](README.md) · [Next: Authority Before Action](02-authority-before-action.md)

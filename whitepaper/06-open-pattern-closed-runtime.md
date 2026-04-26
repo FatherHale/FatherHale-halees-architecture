@@ -1,4 +1,4 @@
-# 06 — Public Boundary
+# 06 — Open Pattern, Closed Runtime
 
 > [!IMPORTANT]
 > The public specification explains the pattern. The closed runtime remains the machine.
@@ -87,4 +87,4 @@ The runtime remains closed.
 
 The architecture pattern is public.
 
-[Back to reader](README.md) · [Previous: Examples](05-examples.md)
+[Back to reader](README.md) · [Previous: Hospitality Use Cases](05-hospitality-use-cases.md)

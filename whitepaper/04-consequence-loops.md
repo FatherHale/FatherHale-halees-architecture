@@ -1,4 +1,4 @@
-# 04 — Operational Loops
+# 04 — Consequence Loops
 
 > [!IMPORTANT]
 > A decision is not proven at approval. A decision is proven by what happened after it entered the operation.
@@ -107,4 +107,4 @@ Trust cannot depend only on confidence. In operations, trust requires a record.
 
 Auditability is not paperwork. It is operational memory.
 
-[Back to reader](README.md) · [Previous: Constraints](03-constraints.md) · [Next: Examples](05-examples.md)
+[Back to reader](README.md) · [Previous: Identity as Constraint](03-identity-as-constraint.md) · [Next: Hospitality Use Cases](05-hospitality-use-cases.md)
