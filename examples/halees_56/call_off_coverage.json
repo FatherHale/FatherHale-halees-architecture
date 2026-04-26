@@ -1,0 +1,27 @@
+{
+  "id": "halees56-usecase-call-off-coverage",
+  "signal": "Server called off two hours before dinner rush. Find coverage and draft outreach.",
+  "expected_agents": [
+    "Call-Off Coverage Agent",
+    "Scheduling Agent",
+    "Labor Cost Agent",
+    "Policy & Permission Agent",
+    "Communications Agent"
+  ],
+  "actor_role": "manager",
+  "risk_level": "high",
+  "has_ground_truth": true,
+  "asks_to_execute": false,
+  "contains_private_data": false,
+  "requires_manager_approval": true,
+  "expected_gate_decision": "review",
+  "expected_binary": 0,
+  "evidence_needed": [
+    "current schedule",
+    "employee availability",
+    "role qualifications",
+    "labor rules",
+    "overtime state"
+  ],
+  "public_boundary": "This scenario demonstrates routing and review logic only. It does not contact employees or change a schedule."
+}
