@@ -4,7 +4,7 @@
 
 ## Enforcement First AI Operations for Hospitality
 
-**Full public architecture paper**
+**Full public architecture paper for governed hospitality intelligence.**
 
 <p align="center">
   <a href="https://github.com/FatherHale/HaleES-Architecture/blob/main/LICENSE.md">
@@ -13,13 +13,19 @@
   <img src="https://img.shields.io/badge/Status-Public%20Architecture%20Paper-gold.svg?style=flat" alt="Status: Public Architecture Paper">
   <img src="https://img.shields.io/badge/Runtime-Closed-black.svg?style=flat" alt="Runtime: Closed">
   <img src="https://img.shields.io/badge/Pattern-Enforcement%20First-gold.svg?style=flat" alt="Pattern: Enforcement First">
-  <img src="https://img.shields.io/badge/Author-Jason%20Hale-gold.svg?style=flat" alt="Author: Jason Hale">
+  <img src="https://img.shields.io/badge/Hospitality-Operations%20Governance-gold.svg?style=flat" alt="Hospitality Operations Governance">
+  <img src="https://img.shields.io/badge/Author-Jason%20Hale-black.svg?style=flat" alt="Author: Jason Hale">
 </p>
 
 </div>
 
 > [!IMPORTANT]
-> HaleES starts with enforcement, not generation. This paper shares the public architecture pattern. The production HaleES runtime remains closed.
+> **Core claim:** A useful AI answer is not the same thing as a safe decision. A safe decision is not the same thing as permission to act.
+
+> [!NOTE]
+> GitHub mobile can render long Markdown files, Mermaid diagrams, and wide tables slowly. Diagrams in this paper are placed inside collapsible sections where possible to reduce mobile rendering friction.
+
+---
 
 ## Paper Metadata
 
@@ -32,6 +38,29 @@
 | Architecture pattern | Public |
 | Repository | https://github.com/FatherHale/HaleES-Architecture |
 
+## Executive Signal
+
+| HaleES separates | Why it matters |
+| --- | --- |
+| Knowledge from authority | Knowing is not permission |
+| Generation from acceptance | Output does not equal trust |
+| Confidence from proof | A confident system can still be wrong |
+| Human approval from override | Review is not a loophole |
+| Public pattern from closed runtime | The architecture can be inspected without exposing the engine |
+
+## Table of Contents
+
+| Section | Topic |
+| --- | --- |
+| 1-4 | Problem, thesis, hospitality context, governed execution |
+| 5-8 | Authority, policy, contracts, staffing ratio constraints |
+| 9-13 | Ground truth, grading, outcomes, iteration, drift monitoring |
+| 14-19 | Identity, emergency mode, audit, privacy, human control, liability |
+| 20-26 | Creative governance, enforcement pattern, examples, public/closed boundary |
+| 27-30 | Why now, design principles, long-term direction, conclusion |
+
+---
+
 ## Abstract
 
 Artificial intelligence is moving from answering questions to taking action. In hospitality, that shift cannot be treated casually. Restaurants, hotels, and service businesses operate under constant pressure from labor constraints, guest expectations, thin margins, compliance requirements, accountability gaps, and fast moving operational decisions.
@@ -42,7 +71,12 @@ This whitepaper introduces the public architecture pattern behind HaleES. HaleES
 
 The production HaleES runtime remains closed. This paper explains the public architecture pattern.
 
+---
+
 ## 1. The Problem
+
+> [!WARNING]
+> Most AI systems are optimized to produce output. They are not built to prove whether that output is allowed to become action.
 
 Most AI systems are designed around generation.
 
@@ -92,13 +126,20 @@ That is the foundation HaleES is being built around.
 
 A standard AI workflow often looks like this.
 
-Prompt. Model. Output.
+```text
+Prompt -> Model -> Output
+```
 
 That pattern is not enough for operations.
 
 HaleES uses a stricter pattern.
 
-Request. Contract. Authority check. Policy check. Ground truth verification. Execution. Grading. Acceptance gate. Human approval. Audit trail. Outcome review.
+```text
+Request -> Contract -> Authority Check -> Policy Check -> Ground Truth Verification -> Execution -> Grading -> Acceptance Gate -> Human Approval -> Audit Trail -> Outcome Review
+```
+
+<details>
+<summary><strong>View governed execution diagram</strong></summary>
 
 ```mermaid
 flowchart TD
@@ -116,29 +157,23 @@ flowchart TD
     L --> M[Future Contract Feedback]
 ```
 
+</details>
+
 Each step exists for a reason.
 
-The request captures intent.
-
-The contract defines the task.
-
-The authority check determines whether the user has the right to request the action.
-
-The policy check determines whether the action is allowed.
-
-Ground truth verification checks whether the system has current and reliable information.
-
-Execution produces a result.
-
-Grading evaluates quality, completeness, risk, constraint adherence, and operational usefulness.
-
-The acceptance gate decides whether the result may move forward.
-
-Human approval preserves accountability where required.
-
-The audit trail records what happened.
-
-Outcome review measures what happened after the decision entered the operation.
+| Step | Purpose |
+| --- | --- |
+| Request | Captures intent |
+| Contract | Defines the task |
+| Authority check | Determines whether the user has the right to request the action |
+| Policy check | Determines whether the action is allowed |
+| Ground truth verification | Checks whether the system has current and reliable information |
+| Execution | Produces a result within scope |
+| Grading | Evaluates quality, completeness, risk, constraint adherence, and operational usefulness |
+| Acceptance gate | Decides whether the result may move forward |
+| Human approval | Preserves accountability where required |
+| Audit trail | Records what happened |
+| Outcome review | Measures what happened after the decision entered the operation |
 
 This creates a boundary between intelligence and authority.
 
@@ -146,9 +181,12 @@ The AI can assist. The AI can recommend. The AI can prepare. The AI can execute 
 
 But it does not automatically inherit permission.
 
+---
+
 ## 5. Authority Before Execution
 
-Authority is not a feature added later. It must be part of the foundation.
+> [!IMPORTANT]
+> Authority is not a feature added later. It must be part of the foundation.
 
 In hospitality operations, different people have different rights.
 
@@ -215,6 +253,7 @@ A contract gives the system something to enforce.
 
 Instead of asking the system to make a better schedule, the system should define the work more precisely.
 
+> [!TIP]
 > Create a proposed schedule for a specific store and date using approved employees only. Respect availability, labor targets, role coverage, minor restrictions, overtime limits, staffing ratios, and manager approval requirements. Do not publish the schedule. Return a proposal with reasoning, risk notes, and any constraint violations.
 
 That is a different kind of interaction.
@@ -222,6 +261,9 @@ That is a different kind of interaction.
 The contract turns AI work into bounded operational work.
 
 ## 8. Staffing Ratios as Hard Constraints
+
+> [!IMPORTANT]
+> Staffing ratios show how business identity becomes operational constraint.
 
 Some operating rules should be treated as identity level constraints.
 
@@ -253,17 +295,19 @@ The purpose is not to publish a universal ratio table for every business or expo
 OPERATING_IDENTITY -> SERVICE_PROMISE -> STAFFING_RATIO_CONSTANT -> CONTRACT_CONSTRAINT -> ACCEPTANCE_GATE
 ```
 
-A property, restaurant, or service model can carry an identity such as luxury hotel, budget hotel, quick service restaurant, full service restaurant, high volume bar, or event operation. That identity defines a service promise. The service promise produces staffing ratio constants. Those constants become hard or soft constraints inside the task contract.
-
-| Public example identity | Public example ratio constant | Constraint posture |
+| Public example identity | Example constant | Constraint posture |
 | --- | --- | --- |
-| Luxury service desk | `MAX_ACTIVE_GUESTS_PER_DESK_AGENT = 8` | Hard constraint when tied to brand promise, safety, or service standard |
-| Budget service desk | `MAX_ACTIVE_GUESTS_PER_DESK_AGENT = 30` | Soft or configurable constraint depending on property policy |
-| Quick service rush line | `MIN_STATION_COVERAGE_REQUIRED = true` | Hard constraint for active rush windows |
-| Full service dining room | `MAX_TABLES_PER_SERVER = policy_defined` | Configurable constraint based on concept and service style |
-| High volume bar | `MIN_BAR_SUPPORT_ROLE_REQUIRED = true` | Hard or elevated constraint during demand spikes |
+| Luxury service desk | `MAX_ACTIVE_GUESTS_PER_DESK_AGENT = 8` | Hard when tied to brand promise, safety, or service standard |
+| Budget service desk | `MAX_ACTIVE_GUESTS_PER_DESK_AGENT = 30` | Soft or configurable by property policy |
+| Quick service rush line | `MIN_STATION_COVERAGE_REQUIRED = true` | Hard during active rush windows |
+| Full service dining room | `MAX_TABLES_PER_SERVER = policy_defined` | Configurable by concept and service style |
+| High volume bar | `MIN_BAR_SUPPORT_ROLE_REQUIRED = true` | Hard or elevated during demand spikes |
 
-These values are public examples, not production defaults.
+> [!NOTE]
+> These values are public examples, not production defaults.
+
+<details>
+<summary><strong>View identity-to-constraint diagram</strong></summary>
 
 ```mermaid
 flowchart TD
@@ -276,6 +320,8 @@ flowchart TD
     F -->|Violation| H[Block Escalate Or Require Approved Exception]
 ```
 
+</details>
+
 When a staffing ratio is classified as hard, a recommendation that violates the ratio should fail the binary acceptance gate even if the global score is otherwise strong.
 
 When a staffing ratio is classified as soft, the system may allow the recommendation to continue with lower confidence, a warning, or required human review.
@@ -285,6 +331,8 @@ When a staffing ratio is tied to law, safety, minors, wage rules, or non-overrid
 This is how identity becomes constraint.
 
 The system does not merely know what type of business it is supporting. It uses that identity to decide what operational actions are allowed.
+
+---
 
 ## 9. External Ground Truth
 
@@ -314,6 +362,13 @@ The grading model can include scores for completeness, accuracy, constraint adhe
 
 HaleES also preserves a binary acceptance gate.
 
+| Layer | Purpose |
+| --- | --- |
+| 0 to 100 evaluation | Measures quality, completeness, usefulness, and constraint adherence |
+| 0 or 1 acceptance | Decides whether the output may proceed |
+| Feedback | Tells the system what must change |
+| Escalation | Moves unsafe or incomplete work to review |
+
 A score of one means the output passed the required threshold and may proceed within its allowed scope.
 
 A score of zero means the output failed and must be revised, blocked, escalated, or returned for another iteration.
@@ -331,6 +386,9 @@ For example, a schedule recommendation might look strong overall but fail becaus
 This is the difference between evaluation and permission.
 
 ## 11. Post Execution Outcome Review
+
+> [!WARNING]
+> A decision is not proven at approval. A decision is proven by what happened after it entered the operation.
 
 HaleES does not stop grading once an action is approved.
 
@@ -353,10 +411,6 @@ The audit trail should not only record what the system recommended. It should re
 This creates a consequence loop.
 
 The system can then learn that the original contract was missing something. Maybe the rush forecast was wrong. Maybe the store had a trainee on grill. Maybe the labor target was too aggressive for that shift. Maybe guest volume looked low but kitchen workload was still high.
-
-A decision is not proven at approval.
-
-A decision is proven by what happened after it entered the operation.
 
 ## 12. Iteration Without Drift
 
@@ -395,6 +449,8 @@ It can slow down approvals. It can require a reason. It can route certain action
 The purpose is not to trick the manager.
 
 The purpose is to protect the operation from blind approval.
+
+---
 
 ## 14. Identity and Presence Verification
 
@@ -466,17 +522,11 @@ AI memory is powerful, but in business it can become dangerous if boundaries are
 
 HaleES separates memory into controlled layers.
 
-Personal memory belongs to the individual. It may include preferences, private workflows, personal notes, or user specific context.
-
-Organization memory belongs to the business. It may include store policies, operating procedures, role structures, schedules, events, approved workflows, and organizational knowledge.
-
-Global pattern intelligence is pattern based learning across contexts. It should not expose one customer's private data to another customer. It should extract generalized operational patterns without revealing source specific details.
-
 | Memory layer | Boundary |
 | --- | --- |
-| Personal memory | Belongs to the individual |
-| Organization memory | Belongs to the business |
-| Global pattern intelligence | Pattern based learning without source exposure |
+| Personal memory | Belongs to the individual and may include preferences, private workflows, personal notes, or user specific context |
+| Organization memory | Belongs to the business and may include store policies, operating procedures, role structures, schedules, events, approved workflows, and organizational knowledge |
+| Global pattern intelligence | Pattern based learning across contexts without exposing one customer's private data to another customer |
 
 This boundary is essential.
 
@@ -500,19 +550,20 @@ The correct outcome is that AI prepared it, checked it, explained it, flagged th
 
 Automation should be earned, not assumed.
 
-Low risk repetitive actions may eventually become automated.
-
-Higher risk actions should require approval.
-
-Sensitive actions should require escalation.
-
-Some actions should never be automated.
-
-The architecture must support all of those levels.
+| Risk level | Control posture |
+| --- | --- |
+| Low risk repetitive actions | May become automated inside narrow limits |
+| Medium risk actions | Require review, traceability, and bounded authority |
+| High risk actions | Require human approval or escalation |
+| Sensitive actions | Require stronger identity verification and audit trail |
+| Prohibited actions | Must remain blocked regardless of user role |
 
 The goal is not to remove managers from operations. The goal is to give managers a stronger operating layer.
 
 ## 19. Liability and Human Override
+
+> [!IMPORTANT]
+> The legal firewall is not human approval alone. The stronger firewall is the combination of hard policy boundaries, authority checks, identity verification, external ground truth, grading, audit trails, consequence review, and human approval for high risk actions.
 
 HaleES is designed to support accountable decision making, not remove accountability from the business.
 
@@ -528,10 +579,6 @@ When a human overrides the system, HaleES should record who overrode it, what wa
 
 This matters because human control should not erase accountability.
 
-The legal firewall is not human approval alone.
-
-The stronger firewall is the combination of hard policy boundaries, authority checks, identity verification, external ground truth, grading, audit trails, consequence review, and human approval for high risk actions.
-
 The purpose of the architecture is not to make AI legally responsible for the business.
 
 The purpose is to make decisions more traceable, more governed, and harder to execute blindly.
@@ -539,6 +586,8 @@ The purpose is to make decisions more traceable, more governed, and harder to ex
 HaleES should reduce risk.
 
 It should not pretend risk disappears.
+
+---
 
 ## 20. Creative Generation and Brand Governance
 
@@ -560,29 +609,12 @@ This allows HaleES to support image and video generation without letting creativ
 
 The enforcement first pattern can be summarized as a sequence of governed steps.
 
-Define the allowed action.
+```text
+Define allowed action -> Define authority -> Define contract -> Check policy -> Verify ground truth -> Execute within scope -> Grade result -> Gate acceptance -> Require human approval where needed -> Record trace -> Review outcome -> Feed consequences back into future contracts
+```
 
-Define who has authority.
-
-Define the contract.
-
-Check policy.
-
-Verify ground truth.
-
-Execute within scope.
-
-Grade the result.
-
-Gate acceptance.
-
-Require human approval where needed.
-
-Record the trace.
-
-Review the outcome.
-
-Feed consequences back into future contracts.
+<details>
+<summary><strong>View enforcement-first lifecycle diagram</strong></summary>
 
 ```mermaid
 flowchart TD
@@ -599,11 +631,16 @@ flowchart TD
     K --> L[Feed Consequences Into Future Contracts]
 ```
 
+</details>
+
 This pattern can apply across hospitality workflows such as scheduling, shift swaps, call off handling, labor recommendations, task assignment, cleaning checks, inventory workflows, guest recovery, training guidance, manager communication, incident documentation, performance coaching, forecasting, preparation, and marketing content creation.
 
 The same pattern can also apply outside hospitality, but hospitality makes the need obvious because the operating environment is fast, human, physical, and consequence heavy.
 
 ## 22. Example: Call Off Handling
+
+> [!TIP]
+> A basic chatbot might say to ask another employee to cover the shift. An enforcement-first system checks authority, eligibility, labor constraints, coverage risk, communication rules, approval requirements, and audit needs before action.
 
 A team member calls off two hours before a dinner rush.
 
@@ -662,6 +699,9 @@ The image may look good and still fail if it shows the wrong product, implies an
 This keeps creative speed inside operational control.
 
 ## 26. Open Architecture and Closed Runtime
+
+> [!IMPORTANT]
+> The public specification explains the pattern. The closed runtime remains the machine.
 
 The public HaleES architecture exists to share the pattern without exposing the production runtime.
 
