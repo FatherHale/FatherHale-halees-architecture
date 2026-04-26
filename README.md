@@ -2,7 +2,7 @@
 
 ![HaleES Architecture](assets/halees-architecture-header.svg)
 
-> Public architecture specification for HaleES, An enforcement-first governance layer for reliable, auditable AI agent operations.
+> Public architecture specification for HaleES, an enforcement-first governance layer for reliable, auditable AI agent operations.
 
 Thesis
 
@@ -15,7 +15,18 @@ This is not a tooling problem. It is a **governance problem**.
 
 HaleES exists to solve it.
 
-Many modern AI agent frameworks are built to maximize flexibility: connect more tools, support more prompts, chain more workflows, and allow agents to improvise across loosely bounded tasks. That flexibility can be useful for experimentation. But production operations, especially in domains where service quality, policy compliance, and accountability matter and require something stricter.
+## Public Whitepaper
+
+> [!IMPORTANT]
+> The HaleES whitepaper is now available as a dedicated public architecture paper. The README remains the repo front door. The production HaleES runtime remains closed.
+
+| Paper | Purpose |
+| --- | --- |
+| [Enforcement First AI Operations for Hospitality](WHITEPAPER.md) | Long-form public architecture paper defining the enforcement-first pattern for hospitality operations |
+
+The whitepaper expands the public pattern across authority, contracts, grading, audit trails, external ground truth, human approval, liability boundaries, post-execution outcome review, and the public-versus-closed runtime boundary.
+
+Many modern AI agent frameworks are built to maximize flexibility: connect more tools, support more prompts, chain more workflows, and allow agents to improvise across loosely bounded tasks. That flexibility can be useful for experimentation. But production operations, especially in domains where service quality, policy compliance, and accountability matter, require something stricter.
 
 HaleES starts from a different premise: an operational AI system is only as reliable as its governance. In real environments, useful intelligence must be paired with enforceable authority boundaries, traceable decisions, explicit quality gates, and deterministic pass/fail outcomes.
 
@@ -81,7 +92,7 @@ Conceptually:
 
 This architecture ensures that orchestration is policy aware rather than ad hoc. Selection and execution are not merely capability driven. They are governance driven.
 
-To be explicit about boundary: Thee production Sensei OS runtime remains proprietary. This public repository describes architectural patterns, open contract/grading conventions, and governance principles—not the closed production internals.
+To be explicit about boundary: The production Sensei OS runtime remains proprietary. This public repository describes architectural patterns, open contract/grading conventions, and governance principles—not the closed production internals.
 
 ### Dual-Layer Grading
 
