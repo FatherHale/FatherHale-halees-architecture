@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://github.com/FatherHale/HaleES-Architecture/blob/main/LICENSE.md">
-    <img src="https://img.shields.io/badge/License-AGPL--3.0-gold.svg?style=flat" alt="License: AGPL-3.0">
+    <img src="https://img.shields.io/badge/License-Apache--2.0-gold.svg?style=flat" alt="License: Apache-2.0">
   </a>
   <img src="https://img.shields.io/badge/Patent-Pending-gold.svg?style=flat" alt="Patent Pending">
   <img src="https://img.shields.io/badge/Version-0.1.0-gold.svg?style=flat" alt="Version 0.1.0">
@@ -137,6 +137,20 @@ This is an early public specification with runnable reference material.
 | Private datasets | Customer and operational data |
 
 This boundary is intentional. The public specification explains the pattern. The private runtime remains the machine.
+
+## License and Commercial Boundary
+
+The public architecture materials in this repository are licensed under Apache-2.0.
+
+| Public under Apache-2.0 | Requires separate HaleES agreement |
+| --- | --- |
+| Architecture specification | Production Sensei OS runtime |
+| Public examples and mock loops | Proprietary grader implementation |
+| Public schemas and validators | Live integrations and production adapters |
+| Public diagrams and documentation | Hosted infrastructure and deployment systems |
+| Public governance pattern | Commercial runtime workflows and private policies |
+
+Commercial teams may study, fork, and build from the public architecture materials under Apache-2.0 terms. Commercial access to the HaleES production runtime, proprietary implementation, partnerships, support, or private deployment work requires a separate agreement with HaleES / Jason Hale.
 
 ## Core Concepts At A Glance
 
