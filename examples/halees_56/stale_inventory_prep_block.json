@@ -1,0 +1,27 @@
+{
+  "id": "halees56-usecase-stale-inventory-prep-block",
+  "signal": "Prep list needs adjustment but inventory count is stale.",
+  "expected_agents": [
+    "Prep Production Agent",
+    "Inventory Agent",
+    "Waste / Variance Agent",
+    "Kitchen Flow Agent",
+    "Grading / QA Agent"
+  ],
+  "actor_role": "manager",
+  "risk_level": "medium",
+  "has_ground_truth": false,
+  "asks_to_execute": false,
+  "contains_private_data": false,
+  "requires_manager_approval": false,
+  "expected_gate_decision": "block",
+  "expected_binary": 0,
+  "evidence_needed": [
+    "fresh inventory count",
+    "forecast demand",
+    "prep par",
+    "waste trend",
+    "shelf-life rule"
+  ],
+  "public_boundary": "This scenario demonstrates missing-ground-truth blocking. It does not create or change a prep sheet."
+}
